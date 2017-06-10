@@ -1,7 +1,13 @@
-<p>
-  animal-list works!
-</p>
-
 <div *ngFor="let animal of animals">
-  <p>{{animal.name}}</p>
+  <div class="well-base">
+    <h3>{{animal.name}}</h3>
+    <p><b>Species: </b>{{animal.species}}</p>
+    <p><b>Age: </b>{{animal.age}}</p>
+    <p><b>Diet: </b>{{animal.diet}}</p>
+    <p><b>Location: </b>{{animal.location}}</p>
+    <p><b>Caretakers: </b>{{animal.caretakers}}</p>
+    <p><b>Sex: </b>{{animal.sex}}</p>
+    <p><b>Likes: </b>{{animal.likes}}</p>
+    <p><b>Dislikes: </b>{{animal.dislikes}}</p>
+  </div>
 </div>
