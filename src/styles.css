@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+/*Color Scheme*/
+.color-primary-0 { color: #532B72 }
+.color-primary-1 { color: #9476AB }
+.color-primary-2 { color: #724C8F }
+.color-primary-3 { color: #391356 }
+.color-primary-4 { color: #220439 }

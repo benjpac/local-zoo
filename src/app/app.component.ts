@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-// import { Animal } from './animal.model';
+import { Component, OnInit } from '@angular/core';
+import { Animal } from './animal.model';
 import { AnimalService } from './animal.service';
 
 @Component({
@@ -8,6 +8,24 @@ import { AnimalService } from './animal.service';
   styleUrls: ['./app.component.css'],
   providers: [ AnimalService ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  masterAnimalList: Animal[] = [];
+
+  constructor(private animalService: AnimalService) {}
+
+  ngOnInit() {
+    this.animalService.getAnimals()
+      .then(masterAnimalList => this.masterAnimalList = masterAnimalList)
+  }
+
+  selectedAnimal = null;
+
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
 
 }

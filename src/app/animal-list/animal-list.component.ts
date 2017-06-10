@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from '../animal.model';
 import { AnimalService } from '../animal.service';
 
@@ -7,14 +7,12 @@ import { AnimalService } from '../animal.service';
   templateUrl: './animal-list.component.html',
   styleUrls: ['./animal-list.component.css']
 })
-export class AnimalListComponent implements OnInit {
-  animals: Animal[] = [];
+export class AnimalListComponent {
+  @Input() childAnimalList: Animal[];
+  @Output() clickSender = new EventEmitter();
 
-  constructor(private animalService: AnimalService) {}
-
-  ngOnInit() {
-    this.animalService.getAnimals()
-      .then(animals => this.animals = animals)
+  editButtonHasBeenClicked(animalToEdit: Animal) {
+    this.clickSender.emit(animalToEdit);
   }
-  
+
 }

@@ -1,13 +1,15 @@
-<div *ngFor="let animal of animals">
+<div *ngFor="let animal of childAnimalList">
   <div class="well-base">
-    <h3>{{animal.name}}</h3>
-    <p><b>Species: </b>{{animal.species}}</p>
-    <p><b>Age: </b>{{animal.age}}</p>
-    <p><b>Diet: </b>{{animal.diet}}</p>
-    <p><b>Location: </b>{{animal.location}}</p>
-    <p><b>Caretakers: </b>{{animal.caretakers}}</p>
-    <p><b>Sex: </b>{{animal.sex}}</p>
-    <p><b>Likes: </b>{{animal.likes}}</p>
-    <p><b>Dislikes: </b>{{animal.dislikes}}</p>
+    <h3><strong>{{animal.name}}</strong></h3>
+    <p><strong>Species: </strong>{{animal.species}}</p>
+    <p><strong>Age: </strong>{{animal.age}}</p>
+    <p><strong>Diet: </strong>{{animal.diet}}</p>
+    <p><strong>Location: </strong>{{animal.location}}</p>
+    <p><strong>Caretakers: </strong>{{animal.caretakers}}</p>
+    <p><strong>Sex: </strong>{{animal.sex}}</p>
+    <p><strong>Likes: </strong>{{animal.likes}}</p>
+    <p><strong>Dislikes: </strong>{{animal.dislikes}}</p>
+
+    <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
   </div>
 </div>
