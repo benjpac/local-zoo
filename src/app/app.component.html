@@ -6,8 +6,16 @@
             <h3 class="panel-title"><h1><b>Animal Kingdom Zoo</b></h1></h3>
           </div>
           <div class="panel-body">
-            <app-animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></app-animal-list>
-            <app-edit-animal [childSelectedAnimal]="selectedAnimal"></app-edit-animal>
+
+            <app-add-animal 
+              (animalSender)="addAnimal($event)">
+            </app-add-animal>
+
+            <app-animal-list 
+              [childAnimalList]="masterAnimalList" 
+              (clickSender)="editAnimal($event)">
+            </app-animal-list>
+
           </div>
         </div>      
     </div>

@@ -1,0 +1,55 @@
+<p>
+  add-animal works!
+</p>
+<div class="well-base">
+  <h1>Add Animal</h1>
+  <div>
+    <label>Enter Animal Species:</label>
+    <input #newSpecies>
+  </div>
+  <div>
+    <label>Enter Animal Name:</label>
+    <input #newName>
+  </div>
+  <div>
+    <label>Enter Animal Age:</label>
+    <input #newAge>
+  </div>
+  <div>
+    <label>Enter Animal Diet:</label>
+    <input #newDiet>
+  </div>
+  <div>
+    <label>Enter Animal Location:</label>
+    <input #newLocation>
+  </div>
+  <div>
+    <label>Enter Animal Caretakers:</label>
+    <input #newCaretakers>
+  </div>
+  <div>
+    <label>Enter Animal Sex:</label>
+    <input #newSex>
+  </div>
+  <div>
+    <label>Enter Animal Likes:</label>
+    <input #newLikes>
+  </div>
+  <div>
+    <label>Enter Animal Dislikes:</label>
+    <input #newDislikes>
+  </div>
+  <div>
+    <button (click)="submitForm(
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value,
+      newSpecies.value)">
+    Add Animal</button>
+  </div>
+</div>

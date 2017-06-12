@@ -28,4 +28,8 @@ export class AppComponent implements OnInit {
     this.selectedAnimal = null;
   }
 
+  addAnimal(addAnimalFromChild: Animal) {
+    this.masterAnimalList.push(addAnimalFromChild);
+  }
+
 }
