@@ -2,20 +2,24 @@
   <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default base">
-          <div class="panel-heading">
+          <div class="panel-heading" id="header">
             <h3 class="panel-title"><h1><b>Animal Kingdom Zoo</b></h1></h3>
           </div>
           <div class="panel-body">
-
+            <br>
+            <button *ngIf="!addAnimalBool"
+              (click)="addAnimalButtonClicked()">Add Animal
+            </button>
             <app-add-animal 
-              (animalSender)="addAnimal($event)">
+              [addAnimalBool]="addAnimalBool"
+              (animalSender)="addAnimalSender($event)">
             </app-add-animal>
 
             <app-animal-list 
               [childAnimalList]="masterAnimalList" 
               (clickSender)="editAnimal($event)">
             </app-animal-list>
-
+            
           </div>
         </div>      
     </div>

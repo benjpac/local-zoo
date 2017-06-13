@@ -7,3 +7,32 @@
 .color-primary-2 { color: #724C8F }
 .color-primary-3 { color: #391356 }
 .color-primary-4 { color: #220439 }
+
+.well-base {
+  color: #9476ab;
+  background: #391356;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 0.2em;
+}
+
+.base {
+  background: #391356;
+  font-family : verdana, arial, helvetica, sans-serif;
+}
+
+.panel-heading {
+  background: #9476AB;
+  color: #220439;
+}
+
+.base {
+  background: #391356;
+  font-family : verdana, arial, helvetica, sans-serif;
+}
+
+#header {
+  background: #9476AB;
+  color: #220439;
+}
+

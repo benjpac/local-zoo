@@ -1,8 +1,6 @@
-<p>
-  add-animal works!
-</p>
-<div class="well-base">
-  <h1>Add Animal</h1>
+<div class="well-base" *ngIf="addAnimalBool">
+  <h3><b>Animal Details</b></h3>
+  <br>
   <div>
     <label>Enter Animal Species:</label>
     <input #newSpecies>
@@ -39,17 +37,18 @@
     <label>Enter Animal Dislikes:</label>
     <input #newDislikes>
   </div>
+  <br>
   <div>
     <button (click)="submitForm(
       newSpecies.value,
-      newSpecies.value,
-      newSpecies.value,
-      newSpecies.value,
-      newSpecies.value,
-      newSpecies.value,
-      newSpecies.value,
-      newSpecies.value,
-      newSpecies.value)">
+      newName.value,
+      newAge.value,
+      newDiet.value,
+      newLocation.value,
+      newCaretakers.value,
+      newSex.value,
+      newLikes.value,
+      newDislikes.value)">
     Add Animal</button>
   </div>
 </div>

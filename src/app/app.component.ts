@@ -12,24 +12,30 @@ export class AppComponent implements OnInit {
   masterAnimalList: Animal[] = [];
 
   constructor(private animalService: AnimalService) {}
-
+  
   ngOnInit() {
     this.animalService.getAnimals()
       .then(masterAnimalList => this.masterAnimalList = masterAnimalList)
   }
 
   selectedAnimal = null;
+  addAnimalBool: boolean = false;
 
-  editAnimal(clickedAnimal) {
-    this.selectedAnimal = clickedAnimal;
+  // editAnimal(clickedAnimal) {
+  //   this.selectedAnimal = clickedAnimal;
+  // }
+
+  // finishedEditing() {
+  //   this.selectedAnimal = null;
+  // }
+
+  addAnimalButtonClicked() {
+    this.addAnimalBool = true;
   }
 
-  finishedEditing() {
-    this.selectedAnimal = null;
-  }
-
-  addAnimal(addAnimalFromChild: Animal) {
+  addAnimalSender(addAnimalFromChild: Animal) {
     this.masterAnimalList.push(addAnimalFromChild);
+    this.addAnimalBool = false;
   }
 
 }
