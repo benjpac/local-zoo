@@ -1,4 +1,42 @@
-
-<p>
-  edit-animal works!
-</p>
+<div class="well-base" *ngIf="selectedAnimalChild">
+  <h3><b>Edit {{selectedAnimalChild.name}}</b></h3>
+  <br>
+  <div>
+    <label>Enter Animal Name:</label>
+    <input [(ngModel)]="selectedAnimalChild.name">
+  </div>
+  <div>
+    <label>Enter Animal Species:</label>
+    <input [(ngModel)]="selectedAnimalChild.species">
+  </div>
+  <div>
+    <label>Enter Animal Age:</label>
+    <input [(ngModel)]="selectedAnimalChild.age">
+  </div>
+  <div>
+    <label>Enter Animal Diet:</label>
+    <input [(ngModel)]="selectedAnimalChild.diet">
+  </div>
+  <div>
+    <label>Enter Animal Location:</label>
+    <input [(ngModel)]="selectedAnimalChild.location">
+  </div>
+  <div>
+    <label>Enter Number of Caretakers:</label>
+    <input [(ngModel)]="selectedAnimalChild.caretakers">
+  </div>
+  <div>
+    <label>Enter Animal Sex:</label>
+    <input [(ngModel)]="selectedAnimalChild.sex">
+  </div>
+  <div>
+    <label>Enter Animal Likes:</label>
+    <input [(ngModel)]="selectedAnimalChild.likes">
+  </div>
+  <div>
+    <label>Enter Animal Dislikes:</label>
+    <input [(ngModel)]="selectedAnimalChild.dislikes">
+  </div>
+  <br>
+  <button (click)="doneButtonClicked()">Edit {{selectedAnimalChild.name}} / Close</button>
+</div>

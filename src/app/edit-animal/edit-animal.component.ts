@@ -8,6 +8,11 @@ import { Animal } from '../animal.model';
   styleUrls: ['./edit-animal.component.css']
 })
 export class EditAnimalComponent {
-  @Input() childSelectedAnimal: Animal;
+  @Input() selectedAnimalChild: Animal;
   @Output() doneButtonClickedSender = new EventEmitter();
+
+  doneButtonClicked() {
+    this.doneButtonClickedSender.emit();
+  }
+    
 }

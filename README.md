@@ -2,6 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
+During your free time you've decided to volunteer at your local zoo! It's been fun mucking out boar enclosures and not falling into the shark tank, but the assistant director has approached you and asked for your help in a different area.
+
+The Zoo's animal tracking software's license has expired, and they're fed up with paying expensive licensing fees for an application that doesn't work very well. Besides just being generally user-unfriendly, the previous app didn't allow zoo workers to track the animals' likes and dislikes, or how many caretakers each requires.
+
+You've agreed to use your web development skills to help out! Plan and create an application to track animals at your local Zoo. A senior developer will review your work -- and they are interested in hiring! Before you begin, take some time to map out a plan - what features do you definitely want to implement, which can wait until you're approved for a larger project? Make sure to record your ambitions in your README.
+
+## Planning
+
+1. Configuration/dependencies
+  * Git; required to clone project locally
+  * NodeJS; required to run ember and associated dependencies
+  * AngularCLI; required to serve project
+
+2. Specs
+  * Spec 1: Click "Add Animal" > opens animal form > Fill in form > click "Add Animal" button > new animal is displayed at the bottom
+  * Spec 2: Click "Edit (Animal Name)" > opens animal info > change what you want > click "Done" > edits are saved
+  * Spec 3: 
+
+3. Integration
+  * App.component contains selectors for an animal listing component, editing animal component and adding animal component
+  * Filter by age pipe added to animal listing component
+
+4. UX/UI
+  * Use bootstrap to make web app professional / portfolio ready
+
+5. Polish
+  * Improve styling to a portfolio ready state
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

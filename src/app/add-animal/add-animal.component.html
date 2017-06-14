@@ -38,8 +38,7 @@
     <input #newDislikes>
   </div>
   <br>
-  <div>
-    <button (click)="submitForm(
+  <button (click)="submitForm(
       newSpecies.value,
       newName.value,
       newAge.value,
@@ -49,6 +48,6 @@
       newSex.value,
       newLikes.value,
       newDislikes.value)">
-    Add Animal</button>
-  </div>
+  Add Animal</button>
+  <button (click)="cancelForm()">Cancel</button>
 </div>

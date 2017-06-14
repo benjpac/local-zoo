@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Animal } from './animal.model';
 import { AnimalService } from './animal.service';
 
@@ -19,23 +19,28 @@ export class AppComponent implements OnInit {
   }
 
   selectedAnimal = null;
+  
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
+
   addAnimalBool: boolean = false;
-
-  // editAnimal(clickedAnimal) {
-  //   this.selectedAnimal = clickedAnimal;
-  // }
-
-  // finishedEditing() {
-  //   this.selectedAnimal = null;
-  // }
 
   addAnimalButtonClicked() {
     this.addAnimalBool = true;
   }
 
   addAnimalSender(addAnimalFromChild: Animal) {
-    this.masterAnimalList.push(addAnimalFromChild);
-    this.addAnimalBool = false;
+    if (addAnimalFromChild) {
+      this.addAnimalBool = false;
+    } else {
+      this.masterAnimalList.push(addAnimalFromChild);
+      this.addAnimalBool = false;
+    }
   }
 
 }

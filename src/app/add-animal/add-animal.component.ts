@@ -33,4 +33,8 @@ export class AddAnimalComponent {
       dislikes);
     this.animalSender.emit(animalToAdd);
   }
+
+  cancelForm() {
+    this.animalSender.emit();
+  }
 }

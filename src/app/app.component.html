@@ -7,17 +7,24 @@
           </div>
           <div class="panel-body">
             <br>
-            <button *ngIf="!addAnimalBool"
-              (click)="addAnimalButtonClicked()">Add Animal
-            </button>
+            <div class="well-base" *ngIf="!addAnimalBool">
+              <button 
+                (click)="addAnimalButtonClicked()">Add Animal
+              </button>
+            </div>
             <app-add-animal 
               [addAnimalBool]="addAnimalBool"
               (animalSender)="addAnimalSender($event)">
             </app-add-animal>
 
+            <app-edit-animal 
+              [selectedAnimalChild]="selectedAnimal"
+              (doneButtonClickedSender)="finishedEditing()">
+              </app-edit-animal>
+
             <app-animal-list 
               [childAnimalList]="masterAnimalList" 
-              (clickSender)="editAnimal($event)">
+              (editClickSender)="editAnimal($event)">
             </app-animal-list>
             
           </div>
