@@ -1,4 +1,13 @@
-<div *ngFor="let animal of childAnimalList">
+<div class="well-base">
+  <select (change)="onChange($event.target.value)">
+    <option value="">Filter by Age</option>
+    <option value="under2Age">Young Animals</option>
+    <option value="over2Age">Mature Animals</option>
+    <option value="allAge">All Animals</option>
+  </select>
+</div>
+
+<div *ngFor="let animal of childAnimalList | age:filterByAge">
   <div class="well-base">
     <h3><strong>{{animal.name}}</strong></h3>
     <p><strong>Species: </strong>{{animal.species}}</p>

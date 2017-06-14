@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AnimalListComponent } from './animal-list/animal-list.component';
 import { EditAnimalComponent } from './edit-animal/edit-animal.component';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
-import { CompletenessPipe } from './completeness.pipe';
+import { AgePipe } from './age.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { CompletenessPipe } from './completeness.pipe';
     AnimalListComponent,
     EditAnimalComponent,
     AddAnimalComponent,
-    CompletenessPipe
+    AgePipe
   ],
   imports: [
     BrowserModule,

@@ -16,4 +16,10 @@ export class AnimalListComponent {
     this.editClickSender.emit(animalToEdit);
   }
 
+  filterByAge = null;
+
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
+  }
+
 }

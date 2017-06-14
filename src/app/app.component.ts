@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   addAnimalSender(addAnimalFromChild: Animal) {
-    if (addAnimalFromChild) {
+    if (!addAnimalFromChild) {
       this.addAnimalBool = false;
     } else {
       this.masterAnimalList.push(addAnimalFromChild);
