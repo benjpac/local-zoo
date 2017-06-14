@@ -10,16 +10,16 @@ import { AnimalService } from './animal.service';
 })
 export class AppComponent implements OnInit {
   masterAnimalList: Animal[] = [];
+  selectedAnimal = null;
+  addAnimalBool = false;
 
   constructor(private animalService: AnimalService) {}
-  
+
   ngOnInit() {
     this.animalService.getAnimals()
       .then(masterAnimalList => this.masterAnimalList = masterAnimalList)
   }
 
-  selectedAnimal = null;
-  
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
   }
@@ -27,8 +27,6 @@ export class AppComponent implements OnInit {
   finishedEditing() {
     this.selectedAnimal = null;
   }
-
-  addAnimalBool: boolean = false;
 
   addAnimalButtonClicked() {
     this.addAnimalBool = true;

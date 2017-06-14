@@ -14,5 +14,5 @@ export class EditAnimalComponent {
   doneButtonClicked() {
     this.doneButtonClickedSender.emit();
   }
-    
+
 }

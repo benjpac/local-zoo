@@ -28,7 +28,7 @@ You've agreed to use your web development skills to help out! Plan and create an
   * Use bootstrap to make web app professional / portfolio ready
 
 5. Polish
-  * Improve styling to a portfolio ready state
+  * Resolve all ng lint errors
 
 ## Development server
 

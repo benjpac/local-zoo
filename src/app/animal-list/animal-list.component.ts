@@ -12,11 +12,11 @@ export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() editClickSender = new EventEmitter();
 
+  filterByAge = null;
+
   editButtonHasBeenClicked(animalToEdit: Animal) {
     this.editClickSender.emit(animalToEdit);
   }
-
-  filterByAge = null;
 
   onChange(optionFromMenu) {
     this.filterByAge = optionFromMenu;
